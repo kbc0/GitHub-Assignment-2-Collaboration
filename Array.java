@@ -29,4 +29,23 @@ public class Array {
         }
         return s;
     }
+    
+    
+    //Method for seperately summing numbers at even and odd indices
+    //Returns a string stating which numbers are for even and odd indices
+    public String indexSum(){
+        int even = 0;
+        int odd = 0;
+
+        for (int i = 0; i < this.intArray.length; i++){
+            if (i % 2 == 0){
+                even += this.intArray[i];
+            }
+            else{
+                odd += this.intArray[i];
+            }
+        }
+
+        return "Sum of all even indices of the array is: " + even + "\nSum of all odd indices of the array is: " + odd;
+    }
 }
