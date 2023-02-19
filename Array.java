@@ -5,7 +5,7 @@ public class Array {
     // range [0,100].
     // All the remaining functionality will operate on this array.
     Random rand = new Random();
-    int[] intArray;
+    private int[] intArray;
 
     // constructor method
     public Array(int arraySize) {
