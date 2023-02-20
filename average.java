@@ -4,17 +4,17 @@ import java.util.Arrays;
  *  This class takes an randomly assigned array and dedects how many numbers are there what is the sum.
  *  Also will set a code to return it incase it is needed. Lastly, we will find how far away these array
  *  numbers are from the average and print them out.
- */ 
+ */
 
-class average {
+public class average {
 
     // Implementions
     private double averageOfNumbers;
-    private Integer[] assignedNumberArray;
+    private int[] assignedNumberArray;
     private Double[] numberDistances;
 
     // Constructor of the Class
-    public average(Integer[] numbers) {
+    public average(int[] numbers) {
         this.assignedNumberArray = numbers;
         this.numberDistances = new Double[assignedNumberArray.length];
     }
@@ -30,7 +30,7 @@ class average {
             numberSum += number;
         }
 
-        //Lastly, calculate the average.
+        // Lastly, calculate the average.
         this.averageOfNumbers = numberSum / assignedNumberArray.length;
     }
 
@@ -41,7 +41,8 @@ class average {
 
     // We will find how far off each number is from the average.
     public void setDistance() {
-        // We will be adding a counter to determine which element we are in the element at the moment.
+        // We will be adding a counter to determine which element we are in the element
+        // at the moment.
         int count = 0;
         for (Integer number : assignedNumberArray) {
             numberDistances[count] = Math.abs(number - averageOfNumbers);

@@ -7,7 +7,7 @@ public class Array {
     Random rand = new Random();
     private int[] intArray;
 
-    //constructor method
+    // constructor method
     public Array(int arraySize) {
         intArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
