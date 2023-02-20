@@ -13,7 +13,7 @@ public class Array {
     private double averageOfNumbers;
     private double[] numberDistances;
 
-    // constructor method
+    // Constructor method
     public Array(int arraySize) {
         intArray = new int[arraySize];
         this.numberDistances = new double[intArray.length];
@@ -22,12 +22,12 @@ public class Array {
         }
     }
 
-    // getter method
+    // Getter method
     public int[] getArray() {
         return intArray;
     }
-    // TODO Menu options (i will design the menu according to your methods)
-
+    
+    // A toString method to write our randomly created array
     public String toString() {
         String s = "";
         for (int i = 0; i < intArray.length; i++) {
@@ -115,19 +115,20 @@ public class Array {
     public static void main(String[] args) {
         
         Scanner in = new Scanner(System.in);
-        //getting input from the user to determine array size
+        
+        // Getting input from the user to determine array size
         System.out.print("input an array size between 0-100  : ");
         int arraySize = in.nextInt();
         in.nextLine();
-        //creating array with array constructor
+        // Creating array with array constructor
         Array array = new Array(arraySize);
         System.out.println("Your randomized array is  {" + array + " }");
-        //creating average 
+        
         int userChoice = 0;
         
         while( userChoice !=5 )
         {
-        //getting input from user to choose operation
+            // Getting input from user to choose operation
             System.out.println("1 - Find the maximum value in the array");
             System.out.println("2 - Find the minimum value in the array");
             System.out.println("3 - Display how each element of the array differs from the average.");
@@ -137,23 +138,21 @@ public class Array {
             userChoice = in.nextInt();
             in.nextLine();
 
-            if(userChoice == 1)
-            {
+            if(userChoice == 1){
                 System.out.println("Maximum value in the array is " + array.maxOfArray());
             }
-            else if(userChoice == 2)
-            {
+            
+            else if(userChoice == 2){
                 System.out.println("Minimum value in the array is " + array.minOfArray());
             }
-            else if (userChoice == 3)
-            {
+            
+            else if (userChoice == 3){
                 System.out.println("Average of the array is " + array.getAverage() + " and each element of the array differs from the average as " + array.distanceToString());
             }
-            else if (userChoice == 4)
-            {
+            
+            else if (userChoice == 4){
                 System.out.println(array.indexSum());
             }
         }
-        
     }
 }
