@@ -68,4 +68,54 @@ public class Array {
         }
         return max;
     }
+     public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        //getting input from the user to determine array size
+        System.out.print("input an array size between 0-100  : ");
+        int arraySize = in.nextInt();
+        in.nextLine();
+        //creating array with array constructor
+        Array array = new Array(arraySize);
+        System.out.println("Your randomized array is  {" + array + " }");
+        //creating average 
+        average average = new average(array.getArray());
+        int userChoice = 0;
+        average.setAverage();
+        average.setDistance();
+        
+        while( userChoice !=5 )
+        {
+        //getting input from user to choose operation
+            System.out.println("1 - Find the minimum value in the array");
+            System.out.println("2 - Find the maximum value in the array");
+            System.out.println("3 - Display how each element of the array differs from the average.");
+            System.out.println("4 - Find the sum of elements with odd- and even-numbered indexes.");
+            System.out.println("5 - Exit");
+            System.out.print("Please choose operation :");
+            userChoice = in.nextInt();
+            in.nextLine();
+
+            if(userChoice == 1)
+            {
+                System.out.println("Maximum value in the array is " + array.maxOfArray());
+            }
+            else if(userChoice == 2)
+            {
+                System.out.println("Minimum value in the array is " + array.minOfArray());
+            }
+            else if (userChoice == 3)
+            {
+                System.out.println("Each element of the array differs from the average as" + average);
+            }
+            else if (userChoice == 4)
+            {
+                System.out.println(array.indexSum());
+            }
+        }
+        
+
+
+        
+    }
 }
