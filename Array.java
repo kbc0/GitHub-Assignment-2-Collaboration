@@ -88,8 +88,8 @@ public class Array {
         while( userChoice !=5 )
         {
         //getting input from user to choose operation
-            System.out.println("1 - Find the minimum value in the array");
-            System.out.println("2 - Find the maximum value in the array");
+            System.out.println("1 - Find the maximum value in the array");
+            System.out.println("2 - Find the minimum value in the array");
             System.out.println("3 - Display how each element of the array differs from the average.");
             System.out.println("4 - Find the sum of elements with odd- and even-numbered indexes.");
             System.out.println("5 - Exit");
