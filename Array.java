@@ -48,4 +48,26 @@ public class Array {
 
         return "Sum of all even indices of the array is: " + even + "\nSum of all odd indices of the array is: " + odd;
     }
+    
+    // A method that finds and returns the minimum element of an array of integers
+    public int minOfArray() {
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < this.intArray.length; i++) {
+            if (this.intArray[i] < min) {
+                min = this.intArray[i];
+            }
+        }
+        return min;
+    }
+
+    // A method that finds and returns the maximum element of an array of integers
+    public int maxOfArray() {
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < this.intArray.length; i++) {
+            if (this.intArray[i] > max) {
+                max = this.intArray[i];
+            }
+        }
+        return max;
+    }
 }
