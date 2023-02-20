@@ -107,7 +107,7 @@ public class Array {
         // We will be adding a counter to determine which element we are in the element at the moment.
         int count = 0;
         for (Integer number : assignedNumberArray) {
-            numberDistances[count] = Math.abs(number - averageOfNumbers);
+            numberDistances[count] = number - averageOfNumbers;
             count++;
         }
     }
