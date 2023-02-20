@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Array {
     // Given an array size, create an int array that contains random integers in the
